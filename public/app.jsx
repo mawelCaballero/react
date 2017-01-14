@@ -1,11 +1,6 @@
 var Greeter = React.createClass({
   render: function(){
-    return (
-      <div>
-        <h1>Hello REACT</h1>
-        <p>This is a form a component!</p>
-      </div>
-    );
+    return React.createElement('h1',null, 'Hello React.createElement')
 
   }
 }); // most common react method
