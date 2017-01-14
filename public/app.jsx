@@ -6,15 +6,24 @@ var Greeter = React.createClass({
         message : 'This is a form component'
     };
   },
+  getInitialState: function (){
+    return {
+        name: this.props.name
+
+    };
+  },
   onButtonClick: function(element){
     element.preventDefault();
-
     var name = this.refs.name.value;
-    alert(name);
+    this.refs.name.value = '';
+    this.setState({
+      name: name
+    });
 
   },
   render: function(){
-    var name  = this.props.name;
+    var name  =  this.state.name;
+
     var message = this.props.message;
     return (
 
