@@ -4,7 +4,8 @@
   "description": "Simple react app",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "keywords": [
     "Manuel",
@@ -14,5 +15,12 @@
   "license": "MIT",
   "dependencies": {
     "express": "^4.14.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mawelCaballero/react"
+  },
+  "bugs": {
+    "url": "https://github.com/mawelCaballero/react/issues"
   }
 }
