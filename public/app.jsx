@@ -1,4 +1,8 @@
 
+var React = require('react');
+var ReactDom = require('react-dom');
+
+
 var GreeterMessage = React.createClass({
   render: function(){
 
