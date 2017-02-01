@@ -1,22 +1,21 @@
-# react
-Course about react tech
+#Course about react tech
+_________________________________________________________________________
+#In this lesson: Custom package Names
 
-#In this lesson
+Adding to webpack
+in resolve an alias configuration. Whar for? We can define our components with the alias and this is going to work for when we change some code in the defined alias components we can reload the browser and the changes will be present. Otherwise we will have to restart the server and package again to see the changes.
 
-We are going to make a refacor.
-In this case, creating new 2 files and renaming Greeter.js to Greeter.jsx:
-
-These 2 new files are going to be related with the components:
-* GreeterForm.jsx
-* GreeterMessage.jsx
-
-When we are extracting , for example , the code about GreeterForm in a new file we have to do one simple additional thing (not only copy/paste).
-1) create a react variable
-2) do export of GreeterMessage to be available in other components.
-
-Once done, in app.jsx we have to import this component as:
-var GreeterMessage = require('./components/GreeterMessage');
-
+```javascript
+resolve: {
+  root: __dirname,
+  alias:{
+    Greeter:'public/components/Greeter.jsx',
+    GreeterMessage:'public/components/GreeterMessage.jsx',
+    GreeterForm:'public/components/GreeterForm.jsx'
+  },
+  extensions:['','.js','.jsx']
+},
+```
 
 
 #Webpack
