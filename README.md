@@ -29,4 +29,6 @@ module.exports = {
     }
   }
 }
+
+
 We are going to use babel-loader for convert jsx into js files
