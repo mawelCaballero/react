@@ -1,39 +1,39 @@
 #Course about react tech
 _________________________________________________________________________
-#In this lesson: Create from scratch an application --> Boiler Plate.
+#In this lesson: Extra Feautures --> Boiler Plate.
 ___
 
 ## Description
-This is the starting of a react application.
-WebbApp configuration has been configured.
-In this branch, we only show a message printed on screen. 
+In this application scratch , we have added new javascript features with Babel.
+###  [stage-0]
 
-```javascript
-module.exports = {
-  entry: './app/app.jsx',
-  output: {
-      path: __dirname,
-      filename: './public/bundle.js'
-  },
-  resolve: {
-    root: __dirname,
-    alias:{
-    },
-    extensions:['','.js','.jsx']
-  },
-  /* To define in the entry property an jsx we have to specify a loader as babel.*/
-  module:{
-    loaders:[
-      {
-        loader: 'babel-loader',
-        query:{
-            presets: ['react', 'es2015']
-        },
-        test: /\.jsx?$/,
-        //Ignore these folders for packaging
-        exclude: /(node_modules|bower_components)/
-      }
-    ]
-  }
-};
+To install this plugin we need to execute in out console:
 ```
+npm install --save-dev babel-preset-stage-0
+
+```
+
+After install, the way to include in our webpack file config is the following one:
+```[javascript]
+  presets: ['react', 'es2015', 'stage-0']
+```
+
+and we can test it like this example:
+*app.jsx*
+
+
+```[javascript]
+var obj1 = {
+  name: 'Manuel',
+  location: 'Gijon'
+};
+
+var obj2 = {
+  age:33,
+  ...obj1 // this is fucking awesome
+};
+
+console.log(obj2);
+```
+
+  [stage-0]: http://babeljs.io/docs/plugins/preset-stage-0/ "stage-0 link"
