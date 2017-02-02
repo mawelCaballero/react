@@ -1,39 +1,77 @@
-#Course about react tech
+# Example Application
 _________________________________________________________________________
-#In this lesson: Extra Feautures --> Boiler Plate.
+### In this lesson: Build an useful application. Weather app
 ___
 
 ## Description
-In this application scratch , we have added new javascript features with Babel.
-###  [stage-0]
+Application with a container. inside container we are going to divede it between nav and page component.
+See picture:
 
-To install this plugin we need to execute in out console:
+![Template and structure concept desing](https://drive.google.com/open?id=0B4Y8n9rDTStjOHI3OUUzbVVXMFk)
+
+---
+First of all
+
+````
+npm install react-router@2.0.0 --save
+````
+Using react-router for navigate among different screens.
+Adding in our app.jsx the next variable for this propose:
+
+```javascript
+var {Route, Router, IndexRoute, hashHistory} = require('react-router');
+// We are creating a multiple variables about react-router needer for navigation
+// in the next sprint i will explain about IndexRoute, hashHistory
+
+ReactDOM.render( // --> most common react dom method
+  <Router history={hashHistory}>
+    <Route path="/" component={}>
+    </Route>
+  </Router>,
+  document.getElementById('app')
+);
 ```
-npm install --save-dev babel-preset-stage-0
+### Creating 2 new components: Nav and Main
 
-```
+#### Main: container
 
-After install, the way to include in our webpack file config is the following one:
-```[javascript]
-  presets: ['react', 'es2015', 'stage-0']
-```
+This component is going to contain Navigation component and Page component
+```` javascript
 
-and we can test it like this example:
-*app.jsx*
+var React = require('react');
+var Nav = require('Nav');
 
+var Main = React.createClass({
+  render: function (){
+    return (
+      <div>
+        <Nav/>
+        <h2>Main Component</h2>
+      </div>
+    );
+  }
+});
 
-```[javascript]
-var obj1 = {
-  name: 'Manuel',
-  location: 'Gijon'
-};
+module.exports = Main;
 
-var obj2 = {
-  age:33,
-  ...obj1 // this is fucking awesome
-};
+````
 
-console.log(obj2);
-```
+#### Navigation
 
-  [stage-0]: http://babeljs.io/docs/plugins/preset-stage-0/ "stage-0 link"
+This component is going to contain all the links of the different app pages letting a navigation and showing , in future sprints, the content on Page Component  
+```` javascript
+
+var React = require('react');
+
+var Nav = React.createClass({
+  render: function(){
+
+    return (
+      <h2>Nav Component</h2>
+    );
+  }
+});
+
+module.exports = Nav;
+
+````
