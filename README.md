@@ -7,7 +7,7 @@ ___
 Application with a container. inside container we are going to divede it between nav and page component.
 See picture:
 
-![Template and structure concept desing](https://drive.google.com/open?id=0B4Y8n9rDTStjOHI3OUUzbVVXMFk)
+![Template and structure concept desing](https://drive.google.com/uc?id=0B4Y8n9rDTStjOHI3OUUzbVVXMFk)
 
 ---
 First of all
