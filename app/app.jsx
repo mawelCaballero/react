@@ -13,8 +13,8 @@ var Examples = require('Examples');
 ReactDOM.render( // --> most common react dom method
   <Router history={hashHistory}>
     <Route path="/" component={Main}>
-      <Route path="/about" component={About}/>
-      <Route path="/examples" component={Examples}/>
+      <Route path="about" component={About}/>
+      <Route path="examples" component={Examples}/>
       <IndexRoute component={Weather}></IndexRoute>
     </Route>
   </Router>,
